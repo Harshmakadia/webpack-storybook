@@ -1,8 +1,9 @@
 /*
  * Copyright © 2014-2018 Zuru Tech HK Limited and Archbox S.r.l., All rights reserved.
  */
-import React from 'react'
+import React from 'react';
 import  Avatar  from '../../components/Avatar/avatar';
+
 
 class AvatarStory extends React.Component {
     constructor() {
@@ -16,6 +17,7 @@ class AvatarStory extends React.Component {
         )
     }
 }
+
 AvatarStory.defaultProps = {
     img: '',
     altText: 'User Icon',
@@ -24,4 +26,5 @@ AvatarStory.defaultProps = {
     height: 60,
     circle: false
 }
+
 export default AvatarStory

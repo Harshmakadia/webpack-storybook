@@ -6,7 +6,6 @@ import '@storybook/addon-notes/register';
 import { withNotes } from '@storybook/addon-notes';
 import { withReadme, withDocs, doc } from 'storybook-readme';
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
-
 import {Welcome } from '@storybook/react/demo';
 
 import { setOptions } from '@storybook/addon-options';
@@ -15,6 +14,7 @@ setOptions({ addonPanelInRight: true });
 import AvatarStory from '../stories/Avatar/index';
 import AvatarReadme from '../stories/Avatar/README.md';
 import AvatarDocs from '../stories/Avatar/DOCS.md';
+import withStyles from "@sambego/storybook-styles";
 
 const styles = {
   textAlign: 'center',
@@ -25,13 +25,25 @@ const CenterDecorator = (storyFn) => (
   </div>
 );
 // addDecorator(CenterDecorator);
-
 storiesOf('Welcome', module)
   .add('to UI-Kit', () => <Welcome showApp={linkTo('Button')} />)
 
 storiesOf('Avatar', module)
   .addDecorator(withKnobs)
-    .addDecorator(withDocs(AvatarDocs))
+  .addDecorator(withDocs(AvatarDocs))
+  .addParameters({
+    styles:{
+      border:'1px solid black'
+    },
+    options: {
+      showPanel: true,
+      panelPosition: 'right',
+    },
+    readme: {
+      codeTheme: 'github',
+      sidebar: AvatarReadme,
+    },
+  })
     // .addDecorator(withReadme(AvatarReadme))
   .add('Avatar Usage',() => (
     <AvatarStory
@@ -42,6 +54,7 @@ storiesOf('Avatar', module)
       altText={text('altText', 'User Icon')}
     />
   ))
+  
 
 
 
