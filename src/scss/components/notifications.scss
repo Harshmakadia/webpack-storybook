@@ -1,0 +1,64 @@
+//@import "../abstracts/variables";
+
+.centerPanel {
+    height: 100%;
+    padding: 10px 0 0 50px;
+  }
+  
+  .centerHeader {
+    //font-family: $flowBuilderBold;
+    font-size: 22px;
+    letter-spacing: 0;
+    //color: $textColor;
+    margin: 0px 0 25px 0px;
+  }
+  
+  .notificationPanel {
+    height: calc(100% - 66px);
+  }
+  
+  .notificationPanelHeaderWrapper {
+    display: flex;
+  }
+  .allowNotificationMsg {
+    //font-family: $flowBuilderBook;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: #828D93;
+    margin: -16px 0 17px 0;
+  }
+  
+  .checkboxContainer {
+    display: flex;
+    margin: 0px 0 -5px 5px;
+  }
+  
+  .allowNotificationAlertWrapper{
+    width:466px
+  }
+  .allowBrowserNotificationAlertWrapper{
+    width:519px;
+    margin:0 0 10px 0;
+  }
+  
+  .radioBtnGroupWrapper{
+    margin: -2px 0px 0px 22px;
+  }
+  
+  .allowNotificationAlertLink{
+    //font-family: $flowBuilderBold ;
+    cursor:pointer;
+    padding: 2px;
+    border-bottom: 1px solid;
+  }
+  
+  .alertWrapper{
+      position: fixed;
+      max-width: 466px;
+      left: calc(50% - 233px);
+      top: 9px;
+      width: 100%;
+      top: 9px !important;
+      width: 100% !important;;
+      z-index: 1000;
+  }

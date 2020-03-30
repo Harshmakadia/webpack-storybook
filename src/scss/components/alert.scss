@@ -1,0 +1,55 @@
+.recoveryLinkMsgWrapper{
+    border: solid 1px #13be66;
+    background-color: #dbf5e8;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 6px 6px #00000017;
+  }
+
+.recoveryLinkMsg{
+    font-family: $fontFamilyBook;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: center;
+    color: #13be66;
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-bottom: 13px;
+    margin-top: 14px;
+  }
+
+ .errorMsgWrapper{
+    border: solid 1px $alertMessageColor;
+    background-color: $alertMessageBgColor;
+    border-radius: 5px;
+    margin-bottom: 2px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 6px 6px #00000017;
+  }
+
+ .errorMsgWrapper span, .recoveryLinkMsgWrapper span {
+   margin: 12px 17px;
+ }
+
+  .errorMsg{
+    font-family: $fontFamilyBook;
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    color: $alertMessageColor;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+    width: 100%;
+  }
