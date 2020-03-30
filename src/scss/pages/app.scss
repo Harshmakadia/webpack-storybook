@@ -1,0 +1,109 @@
+html, body {
+    background-color: white;
+}
+
+body {
+    font-family: $fontFamilyBook !important;
+}
+
+.content {
+    padding-left: 0px;
+    padding-right: 0px;
+    height: 100%;
+}
+
+.main-content {
+    height: 100%;
+}
+
+.company-list .MuiToolbar-root .MuiIconButton-root {
+    position: absolute;
+    top: -80px;
+    right: 115px;
+    padding: 0;
+}
+
+.vessel-list .MuiToolbar-root .MuiIconButton-root, .user-list .MuiToolbar-root .MuiIconButton-root {
+    position: absolute;
+    top: -105px;
+    right: 100px;
+    padding: 0;
+}
+
+.MuiToolbar-root.MuiTablePagination-toolbar .MuiIconButton-root {
+    margin-right: 0 !important;
+    position: initial !important;
+}
+
+.MuiToolbar-root .MuiIconButton-root:hover {
+    background-color: white !important;
+    border-radius: 0 !important;
+}
+
+.tableContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 25px;
+    height: calc(100% - 105px);
+}
+
+.MuiTableHead-root {
+    position: sticky;
+    top: 0;
+}
+
+.usersTable {
+    height: calc(100% - 20px);
+}
+
+.MuiPaper-root > div:nth-child(2) {
+    height: calc(100% - 150px);
+}
+
+.MuiPaper-root > div:nth-child(2) > div > div {
+    overflow-y: initial !important;
+}
+
+.company-container {
+    padding-left: 40px;
+    padding-right: 40px;
+    height: calc(100% - 122px);
+}
+
+.form-control-element {
+    padding-top:10px;
+    padding-bottom: 15px;
+}
+
+.siteName {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 240px;
+}
+
+.webhook-url {
+    max-width: 200px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.company-tab-container {
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    z-index: 20;
+    width: calc(100% - 100px);
+    border-bottom: 1px solid #e7e7e7;   
+    padding-left: 35px;
+}
+
+.alert-wrapper {
+    position: fixed;
+    max-width: 466px;
+    left: calc(50% - 233px);
+    top: 9px;
+    width: 100%;
+    z-index: 10000;
+}

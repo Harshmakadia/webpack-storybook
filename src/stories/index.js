@@ -5,16 +5,19 @@ import { linkTo } from '@storybook/addon-links';
 import '@storybook/addon-notes/register';
 import { withNotes } from '@storybook/addon-notes';
 import { withReadme, withDocs, doc } from 'storybook-readme';
-import { withKnobs, text, boolean, number } from '@storybook/addon-knobs';
+import { withKnobs, text, boolean, number,select } from '@storybook/addon-knobs';
 import {Welcome } from '@storybook/react/demo';
-
+import withStyles from "@sambego/storybook-styles";
 import { setOptions } from '@storybook/addon-options';
 setOptions({ addonPanelInRight: true });
 
 import AvatarStory from '../stories/Avatar/index';
 import AvatarReadme from '../stories/Avatar/README.md';
 import AvatarDocs from '../stories/Avatar/DOCS.md';
-import withStyles from "@sambego/storybook-styles";
+
+import Button from '../stories/Button/index';
+import ButtonReadme from '../stories/Button/README.md';
+import ButtonDocs from '../stories/Button/DOCS.md';
 
 const styles = {
   textAlign: 'center',
@@ -24,6 +27,16 @@ const CenterDecorator = (storyFn) => (
     { storyFn() }
   </div>
 );
+const options = {
+  Short:'short',
+  Long:'long',
+  Alert:'alert',
+  Outlined:'outlined',
+  Link:'link',
+  Delete:'delete',
+  Line:'line',
+  Icon:'Icon'
+}
 // addDecorator(CenterDecorator);
 storiesOf('Welcome', module)
   .add('to UI-Kit', () => <Welcome showApp={linkTo('Button')} />)
@@ -53,8 +66,31 @@ storiesOf('Avatar', module)
       circle={boolean('circle', false)}
       altText={text('altText', 'User Icon')}
     />
+  ));
+  storiesOf('Button',module)
+  .addDecorator(withKnobs)
+  .addDecorator(withDocs(ButtonDocs))
+  .addParameters({
+    styles:{
+      border:'1px solid black'
+    },
+    options: {
+      showPanel: true,
+      panelPosition: 'right',
+    },
+    readme: {
+      codeTheme: 'github',
+      sidebar: ButtonReadme,
+    },
+  })
+  .add('Button Usage',() => (
+            <Button
+                    disabled={boolean('disabled',false)}
+                    variant={text('variant','outlined')}
+                    btnText={text('Text','Button')}
+                    type={select('type',options)}
+                    fullWidth={boolean('fullWidth',false)}>
+            </Button>
   ))
   
-
-
 

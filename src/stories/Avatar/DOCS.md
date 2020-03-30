@@ -6,6 +6,7 @@ import { Avatar } from 'ui-kit';
 
 <!-- STORY -->
 
+
 ### Flags usage rules
 
 Use **circle** flag when you want to circle the avatar image:

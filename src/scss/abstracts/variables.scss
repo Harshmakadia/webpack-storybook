@@ -1,0 +1,42 @@
+@font-face {
+    font-family: CircularStd-Black;
+    src: url(/CircularStd-Black.ttf);
+}
+@font-face {
+    font-family: CircularStd-Bold;
+    src: url(/CircularStd-Bold.ttf);
+}
+@font-face {
+    font-family: CircularStd-Book;
+    src: url(/CircularStd-Book.ttf);
+}
+@font-face {
+    font-family: CircularStd-Medium;
+    src: url(/CircularStd-Medium.ttf);
+}
+
+$fontFamilyBook: 'CircularStd-Book', sans-serif;
+
+$fontFamilyBold: 'CircularStd-Bold', sans-serif;
+
+$fontFamilyMedium: 'CircularStd-Medium', sans-serif;
+
+$fontFamilyBlack: 'CircularStd-Black', sans-serif;
+
+$alertMessageColor: #ff0000;
+
+$alertMessageBgColor: #ffe4e4;
+
+:export {
+    fontFamilyBook: $fontFamilyBook;
+
+    fontFamilyBold: $fontFamilyBold;
+
+    fontFamilyMedium: $fontFamilyMedium;
+
+    fontFamilyBlack: $fontFamilyBlack;
+
+    alertMessageColor: $alertMessageColor;
+
+    alertMessageBgColor: $alertMessageBgColor;
+}
