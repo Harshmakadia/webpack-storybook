@@ -37,6 +37,11 @@ const options = {
   Line:'line',
   Icon:'Icon'
 }
+const variantOptions = {
+  outlined:'outlined',
+  contained:'contained'
+ 
+}
 // addDecorator(CenterDecorator);
 storiesOf('Welcome', module)
   .add('to UI-Kit', () => <Welcome showApp={linkTo('Button')} />)
@@ -86,10 +91,15 @@ storiesOf('Avatar', module)
   .add('Button Usage',() => (
             <Button
                     disabled={boolean('disabled',false)}
-                    variant={text('variant','outlined')}
+                    variant={select('variant',variantOptions)}
                     btnText={text('Text','Button')}
                     type={select('type',options)}
-                    fullWidth={boolean('fullWidth',false)}>
+                    disableRipple={boolean('disableRipple',true)}
+                    fullWidth={boolean('fullWidth',false)}
+                    handleInputFocus={action('On Focus')}
+                    handleInputBlur={action('On Blur')}
+                    handleClick={action('Button Clicked')}
+                    >
             </Button>
   ))
   

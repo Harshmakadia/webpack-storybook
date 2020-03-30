@@ -16,12 +16,12 @@ class ButtonStory extends React.Component {
                     disabled={this.props.disabled}
                     type={this.props.type}
                     variant={this.props.variant}
-                    onClick={this.props.handleClick}
-                    onFocus={this.props.handleInputFocus} 
-                    onBlur={this.props.handleInputBlur}
+                    handleClick={this.props.handleClick}
+                    handleInputFocus={this.props.handleInputFocus} 
+                    handleInputBlur={this.props.handleInputBlur}
                     // buttonRef={ref => this.props.addRef(ref)}
                     fullWidth={this.props.fullWidth !== "undefined" ? this.props.fullWidth : false}
-                    disableRipple={this.props.type === "link"}
+                    disableRipple={this.props.disableRipple}
                     btnText={this.props.btnText}>       
             </Button>
         )
@@ -34,7 +34,11 @@ ButtonStory.defaultProps = {
     variant:'outlined',
     fullWidth:'true',
     btnText:'Button',
-    fullWidth:''
+    fullWidth:'',
+    disableRipple:'',
+    onClick:'click button',
+    onFocus:'focus action',
+    onBlur:'blur action'
 }
 
 export default ButtonStory
