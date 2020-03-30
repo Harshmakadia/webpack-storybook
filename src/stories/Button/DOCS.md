@@ -15,13 +15,37 @@ import Button from 'ui-kit';
 ###### Button supports 8 skin styles:
 
 - `short` is for short button and for general action.
+```js
+    <Button type='short' variant='contained' fullWidth={false} disabled={false} disableRipple={true} handleClick={'Click'} handleInputFocus={'OnFocus'} handleInputBlur={'OnBlur'} btnText='Button'>
+```
 - `long` is for fullwidth button and for general action.
+```js
+    <Button type='long' variant='contained' fullWidth={true} disabled={false} disableRipple={true} handleClick={'Click'} handleInputFocus={'OnFocus'} handleInputBlur={'OnBlur'} btnText='Button'>
+```
 - `alert` - damaging actions like delete.
+```js
+    <Button type='alert' variant='outlined' fullWidth={false} disabled={false} disableRipple={true} handleClick={'Click'} handleInputFocus={'OnFocus'} handleInputBlur={'OnBlur'} btnText='Button'>
+```
 - `outlined`-is for general action.
+```js
+    <Button type='outlined' variant='outlined' fullWidth={false} disabled={false} disableRipple={true} handleClick={'Click'} handleInputFocus={'OnFocus'} handleInputBlur={'OnBlur'} btnText='Button'>
+```
 - `link` - If you want the circle image(true/false).
+```js
+    <Button type='link' variant='outlined' fullWidth={false} disabled={false} disableRipple={true} handleClick={'Click'} handleInputFocus={'OnFocus'} handleInputBlur={'OnBlur'} btnText='Button'>
+```
 - `delete`-damaging actions like delete.
+```js
+    <Button type='delete' variant='outlined' fullWidth={false} disabled={false} disableRipple={true} handleClick={'Click'} handleInputFocus={'OnFocus'} handleInputBlur={'OnBlur'} btnText='Button'>
+```
 - `line` - general action with lined border.
+```js
+    <Button type='line' variant='outlined' fullWidth={false} disabled={false} disableRipple={true} handleClick={'Click'} handleInputFocus={'OnFocus'} handleInputBlur={'OnBlur'} btnText='Button'>
+```
 - `icon` - general action with icon button.
+```js
+    <Button type='icon' variant='outlined' fullWidth={false} disabled={false} disableRipple={true} handleClick={'Click'} handleInputFocus={'OnFocus'} handleInputBlur={'OnBlur'} btnText='Button'>
+```
 
 
 <!-- STORY_SOURCE -->
