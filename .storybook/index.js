@@ -10,13 +10,9 @@ import {Welcome } from '@storybook/react/demo';
 import withStyles from "@sambego/storybook-styles";
 import { setOptions } from '@storybook/addon-options';
 setOptions({ addonPanelInRight: true });
-import AvatarStory from '../stories/Avatar/index';
-import AvatarReadme from '../stories/Avatar/README.md';
-import AvatarDocs from '../stories/Avatar/DOCS.md';
 
-import Button from '../components/Button/index';
-import ButtonReadme from '../components/Button/README.md';
-import ButtonDocs from '../components/Button/DOCS.md';
+import Button from '../src/components/Button/button.stories';
+import ButtonReadme from '../src/components/Button/README.md';
 
 const styles = {
   textAlign: 'center',
@@ -42,33 +38,6 @@ const variantOptions = {
  
 }
 // addDecorator(CenterDecorator);
-
-// storiesOf('Avatar', module)
-//   .addDecorator(withKnobs)
-//   .addDecorator(withDocs(AvatarDocs))
-//   .addParameters({
-//     styles:{
-//       border:'1px solid black'
-//     },
-//     options: {
-//       showPanel: true,
-//       panelPosition: 'right',
-//     },
-//     readme: {
-//       codeTheme: 'github',
-//       sidebar: AvatarReadme,
-//     },
-//   })
-//     // .addDecorator(withReadme(AvatarReadme))
-//   .add('Avatar Usage',() => (
-//     <AvatarStory
-//       img={text('img', 'https://greatindiantours.com/wp-content/themes/travel-log/images/dummy-user.jpg')}
-//       height={number('height', 60)}
-//       width={number('width', 60)}
-//       circle={boolean('circle', false)}
-//       altText={text('altText', 'User Icon')}
-//     />
-//   ));
 
   storiesOf('Button',module)
   .addDecorator(withKnobs)
@@ -189,5 +158,8 @@ const variantOptions = {
                     >
             </Button>
   ))
+
+
+  
   
 

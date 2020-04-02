@@ -5,7 +5,7 @@ addDecorator(addReadme);
 
 
 function loadStories() {
-  require('../src/stories');
+  require('./');
 }
 
 configure(loadStories, module);
