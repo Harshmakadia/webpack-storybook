@@ -5,6 +5,7 @@ import classNames from 'classnames';
 import {CONSTANTS} from "../../utils/constants";
 // import variables from "../../scss/abstracts/variables.scss";
 // import PropTypes from 'prop-types';
+import buttonStyle from './button.scss';
 
 const style = theme => ({
     commonBtnStyle: {
@@ -192,7 +193,7 @@ class ButtonComponent extends React.Component {
     render() {
         const {classes} = this.props;
         return (
-            <div>
+            <div className={`sssss ${buttonStyle.POP}`}>
                 <Button
                     disabled={this.props.disabled}
                     className={this.getButtonStyle(classes) + ' ' + classNames(classes.commonBtnStyle)}
